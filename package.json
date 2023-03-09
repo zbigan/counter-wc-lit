@@ -1,0 +1,11 @@
+{
+	"scripts": {
+		"build": "tsc counter-wc.ts"
+	},
+	"dependencies": {
+		"lit": "2.6.1"
+	},
+	"devDependencies": {
+		"typescript": "4.9.5"
+	}
+}
