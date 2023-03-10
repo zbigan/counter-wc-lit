@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit'
-import { customElement } from 'lit/decorators'
+import { customElement } from 'lit/decorators.js'
 
 @customElement('counter-wc')
 export class CounterWC extends LitElement {
   count = 0
 
-  static styles = css`
+  static override styles = css`
     h1 {
       font-size: 3.2em;
       line-height: 1.1;
@@ -58,7 +58,7 @@ export class CounterWC extends LitElement {
     this.count--
   }
 
-  render() {
+  override render() {
     return html`
     <div class="root-container">
       <h1>Counter (native web component)</h1>
@@ -71,5 +71,11 @@ export class CounterWC extends LitElement {
       </div>
     </div>
     `
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "counter-wc": CounterWC;
   }
 }

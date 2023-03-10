@@ -1,11 +1,19 @@
 {
+	"type": "module",
+	"main": "counter-wc.js",
+	"module": "counter-wc.js",
+	"name": "counter-wc",
+	"private": true,
+	"types": "counter-wc.d.ts",
 	"scripts": {
-		"build": "tsc counter-wc.ts"
+		"build": "tsc",
+		"clean": "rimraf counter-wc.{d.ts,d.ts.map,js,js.map}"
 	},
 	"dependencies": {
 		"lit": "2.6.1"
 	},
 	"devDependencies": {
+		"rimraf": "4.4.0",
 		"typescript": "4.9.5"
 	}
 }
