@@ -1,2 +1,9 @@
 node_modules
 .DS_Store
+# top level source
+counter-wc.js
+counter-wc.js.map
+counter-wc.d.ts
+counter-wc.d.ts.map
+# only generated for size check
+counter-wc.bundled.js
