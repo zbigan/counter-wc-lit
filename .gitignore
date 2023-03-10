@@ -8,3 +8,4 @@ counter-wc.d.ts.map
 # only generated for size check
 counter-wc.bundled.js
 webpack-bundle-stats.json
+counter-wc.bundled.js.LICENSE.txt

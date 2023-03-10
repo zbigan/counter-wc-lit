@@ -9,7 +9,7 @@
 		"build": "tsc",
 		"clean": "rimraf counter-wc.{d.ts,d.ts.map,js,js.map}",
 		"checksize-rollup": "rollup -c ; cat counter-wc.bundled.js | gzip -9 | wc -c ; rm counter-wc.bundled.js",
-		"checksize-webpack": "webpack ; cat counter-wc.bundled.js | gzip -9 | wc -c ; rm counter-wc.bundled.js"
+		"checksize-webpack": "webpack ; cat counter-wc.bundled.js | gzip -9 | wc -c ; rm counter-wc.bundled.js counter-wc.bundled.js.LICENSE.txt"
 	},
 	"dependencies": {
 		"lit": "2.6.1"
