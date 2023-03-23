@@ -4,9 +4,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 
 export default {
-  input: 'counter-wc.js',
+  input: 'build/counter-wc.js',
   output: {
-    file: 'counter-wc.bundled.js',
+    file: './dist-rollup/counter-wc-rollup.bundled.js',
+    path: "",
     format: 'esm',
   },
   onwarn(warning) {

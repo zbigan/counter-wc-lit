@@ -4,10 +4,10 @@ const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: './counter-wc.ts',
+  entry: './build/counter-wc.js',
   output: {
-    filename: 'counter-wc.bundled.js',
-    path: path.resolve(__dirname, './'),
+    filename: 'counter-wc-webpack.bundled.js',
+    path: path.resolve(__dirname, './dist-webpack'),
   },
   devtool: 'inline-source-map',
   module: {

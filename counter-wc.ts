@@ -1,9 +1,15 @@
 import { LitElement, html, css } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { customElement, property } from 'lit/decorators.js'
 
 @customElement('counter-wc')
 export class CounterWC extends LitElement {
-  count = 0
+  @property()
+  count
+
+  constructor() {
+    super()
+    this.count = 0
+  }
 
   static override styles = css`
     h1 {
@@ -51,17 +57,19 @@ export class CounterWC extends LitElement {
   `
 
   handleIncrement() {
+    console.log('click +')
     this.count++
   }
 
   handleDecrement() {
+    console.log('click -')
     this.count--
   }
 
   override render() {
     return html`
     <div class="root-container">
-      <h1>Counter (native web component)</h1>
+      <h1>Counter</h1>
       <div class="card">
         <button @click=${this.handleIncrement} id="increase">+</button>
         <button @click=${this.handleDecrement} id="decrease">-</button>

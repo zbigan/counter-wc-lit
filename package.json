@@ -4,12 +4,13 @@
 	"module": "counter-wc.js",
 	"name": "counter-wc",
 	"private": true,
-	"types": "counter-wc.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"clean": "rimraf counter-wc.{d.ts,d.ts.map,js,js.map}",
-		"checksize-rollup": "rollup -c ; cat counter-wc.bundled.js | gzip -9 | wc -c ; rm counter-wc.bundled.js",
-		"checksize-webpack": "webpack ; cat counter-wc.bundled.js | gzip -9 | wc -c ; rm counter-wc.bundled.js counter-wc.bundled.js.LICENSE.txt"
+		"clean": "rimraf dist-rollup dist-webpack build",
+		"checksize-rollup": "rollup -c ; cat dist-rollup/counter-wc-rollup.bundled.js | gzip -9 | wc -c ; rimraf dist-rollup",
+		"bundle-rollup": "rollup -c",
+		"checksize-webpack": "webpack ; cat dist-webpack/counter-wc-webpack.bundled.js | gzip -9 | wc -c ; rimraf dist-webpack",
+		"bundle-webpack": "webpack"
 	},
 	"dependencies": {
 		"lit": "2.6.1"
